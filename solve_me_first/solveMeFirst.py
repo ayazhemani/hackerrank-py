@@ -1,7 +1,7 @@
 """Compute the sum of two integers.
 """
 
-def solveMeFirst(x_1, y_1):
+def solve_me_first(x_1, y_1):
     """Function to compute sum of two numbers.
 
     Args:
@@ -18,7 +18,7 @@ def main():
     """
     x_1 = input()
     y_1 = input()
-    print solveMeFirst(x_1, y_1)
+    print solve_me_first(x_1, y_1)
 
 if __name__ == '__main__':
     main()
