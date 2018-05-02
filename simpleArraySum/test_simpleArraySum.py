@@ -1,4 +1,4 @@
-"""TDD Test Cases for simple_array_sum.py
+"""TDD Test Cases for simpleArraySum.py
 """
 
 import unittest
