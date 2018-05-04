@@ -3,10 +3,20 @@
 
 def time_conversion(hh, mm, ss, XM):
     """Convert time from hh:mm:ssXM format to HH:mm:ss format
-        Where:
-            01 <= hh <= 12
-            00 <= HH <= 23
-            X = A | P
+
+    Where:
+        01 <= hh <= 12
+        00 <= HH <= 23
+        X = A | P
+
+    Args:
+        hh (string): 12 hr format Hours
+        mm (string): 12 hr format Minutes
+        ss (string): 12 hr format Seconds
+        XM (sring): 12 hr format AM/PM
+
+    Returns:
+        string: 24 hour converted time
     """
     new_time = [hh, mm, ss]
     if XM == 'PM':
