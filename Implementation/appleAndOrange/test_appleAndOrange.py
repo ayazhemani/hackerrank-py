@@ -14,7 +14,8 @@ class TestAppleAndOrange(unittest.TestCase):
         self.assertEquals(result, [1, 1])
 
     def test_slim_house(self):
-        """Test given sample input
+        """Test opportunity of slim house
+           Failing Test case. However, situation doesn't happen
         """
         result = apple_and_orange([10, 10], [5, 15], [-2, 2, 1], [5, -6])
         self.assertEquals(result, [0, 1])
