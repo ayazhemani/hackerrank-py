@@ -1,19 +1,23 @@
 """Solution for HackerRank challenge: Birthday Chocolate
 """
 
-def birthday_chocolate(squares, day_sum, month_length):
-    """Description
+def birthday_chocolate(squares, total, length):
+    """Determine the number of ways the chocolate can be portioned
+    given the chocolate sequence squares, the target total, and target length
 
     Args:
-        squares (TYPE): Description
-        day_sum (TYPE): Description
-        month_length (TYPE): Description
+        squares (int[]): Numeric sequence on chocolate squares
+        total (int): Target sum of sequence (or day in birthday)
+        length (int): Target length of sequence (or month in birthday)
 
     Returns:
-        TYPE: Description
-    """
-    portions = None
+        int: number of ways chocolate can be portioned to conform to target length and sum
 
+    """
+    portions = 0
+    for i in xrange(len(squares)):
+        if i + length <= len(squares) and (sum(squares[i:i + length]) == total):
+            portions += 1
     return portions
 
 def main():
