@@ -11,6 +11,13 @@ def designer_pdf_viewer(heights, word):
     Hint:
         char = 'a'
         chr(ord(char)) == char #True
+
+    Args:
+        heights (int[26]): height of each character.
+        word (string): highlighted text to find area for.
+
+    Returns:
+        int: area of highlighted word.
     """
     diff = 0 - ord('a') #starting index of heights
     max_height = float('-inf')
