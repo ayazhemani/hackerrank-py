@@ -1,10 +1,25 @@
 """Solution for HackerRank challenge: Save The Prisoner
 """
 
-def save_the_prisoner(prisoners, sweets, chair):
-    """Description
+def save_the_prisoner(prisoners, sweets, first_chair):
+    """Candies are distributed to prisoners in a round robin fashion around a
+    circular table starting with the first chair. The last candy is bad and
+    the recipient must be warned.
+
+    Calculate the chair number of the recipient of the bad candy.
+
+    Args:
+        prisoners (int): number of prisoners (zero indexed).
+        sweets (int): number of candies distributed.
+        first_chair (int): first chair to begin candy distribution.
+
+    Returns:
+        int: chair of prisoner to be warned about bad candy.
     """
-    return
+    warned = (sweets + first_chair - 1) % prisoners
+    if warned == 0:
+        warned += prisoners
+    return warned
 
 def main():
     """Receives input from stdin, provides output to stdout.
