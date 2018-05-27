@@ -15,15 +15,15 @@ def encrypt(str):
     Returns:
         string[]: Columns of block of text.
     """
-    y_len = int(math.floor(len(str) ** 0.5))
-    x_len = int(math.ceil(len(str) ** 0.5))
-    while len(str) > y_len*x_len:
-        y_len += 1
-    str = str.ljust(y_len*x_len)
+    length = int(math.floor(len(str) ** 0.5))
+    width = int(math.ceil(len(str) ** 0.5))
+    while len(str) > length*width:
+        length += 1
+    str = str.ljust(length*width)
 
     result = []
-    for i in range(x_len):
-        result.append(str[i::x_len].replace(' ', ''))
+    for i in range(width):
+        result.append(str[i::width].replace(' ', ''))
 
     return result
 
