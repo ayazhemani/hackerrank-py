@@ -20,6 +20,7 @@ def gen_empty_files(solutions):
     success = []
     for solution in solutions:
         url = solution if 'hackerrank.com' in solution else ''
+        url = url.split('?')[0]
         solution = solution if url is '' else solution.split('/')[-2]
         solution = solution.split('/')[-1]
         solution = solution.replace('-', '_')
